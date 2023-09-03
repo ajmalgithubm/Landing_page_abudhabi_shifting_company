@@ -1,0 +1,524 @@
+/* Base styles for the header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+header {
+    background-color: #0070c0;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Responsive design for screens up to 768px (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        background-color: #0070c0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+        /* Hide the menu by default on small screens */
+    }
+
+    .nav-menu.active {
+        display: flex;
+        /* Show the menu when a mobile menu icon is clicked */
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        /* display: block; */
+        font-size: 24px;
+        color: #ffffff;
+        cursor: pointer;
+        margin-left: auto;
+        /* Push the menu icon to the right */
+    }
+}
+
+/* Additional styles for larger screens (e.g., tablets and desktops) */
+@media screen and (min-width: 769px) {
+    .logo img {
+        width: auto; 
+         height: 50px;
+        /* Adjust the logo height as needed */
+    }
+}
+
+/* Base styles for the hero section */
+#hero {
+    background-image: url('./assest/hero.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    /* This ensures the image stays fixed in the viewport */
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+    height: 100vh;
+    /* Set the section height to 100% of the viewport height */
+    margin-top: -10px;
+    /* Remove default margin for body */
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0070c0;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Responsive design for screens up to 768px (e.g., smartphones) */
+@media screen and (max-width: 768px) {
+    #hero {
+        padding: 80px 0;
+        /* Adjust the padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Additional styles for screens larger than 768px (e.g., tablets and desktops) */
+@media screen and (min-width: 769px) {
+    #hero {
+        padding: 100px 0;
+        /* Adjust the padding for larger screens if needed */
+    }
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Default styles for services section */
+#services {
+    background-color: #ffffff;
+    padding: 40px 0;
+}
+
+#services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+}
+
+/* Responsive styles for services section */
+@media screen and (max-width: 768px) {
+    #services .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Default styles for the "Learn More" button */
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0070c0;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.learn-more-button:hover {
+    background-color: #005999;
+}
+
+/* Responsive styles for the "Learn More" button */
+@media screen and (max-width: 768px) {
+    .learn-more-button {
+        display: block;
+        /* Make it a block-level element for full width on smaller screens */
+        width: 100%;
+        max-width: 200px;
+        /* Adjust the max-width as needed */
+        margin: 0 auto;
+        /* Center the button horizontally */
+    }
+}
+
+/* Default styles for the Testimonials section */
+#testimonials {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+#testimonials .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.testimonial {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.testimonial-text p {
+    font-size: 16px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive styles for the Testimonials section */
+@media screen and (max-width: 768px) {
+    #testimonials .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 100%;
+    }
+}
+
+
+
+
+/* Default styles for the CTA section */
+#cta {
+    background-color: #0070c0;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+#cta .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cta h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#cta p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    max-width: 500px;
+    /* Adjust max width for form container */
+    margin: 0 auto;
+    text-align: left;
+    /* Align form elements to the left */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Add a border for input fields */
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.cta-button {
+    display: inline-block;
+    /* Keep the button inline */
+    padding: 10px 20px;
+    background-color: #005999;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #004c7e;
+}
+
+/* Responsive styles for the CTA section */
+@media screen and (max-width: 768px) {
+    #cta .container {
+        text-align: center;
+        /* Center content on smaller screens */
+    }
+
+    #contact-form {
+        max-width: 100%;
+    }
+
+    .cta-button {
+        display: block;
+        /* Make the button full-width on smaller screens */
+        width: 100%;
+    }
+}
+
+/* Default styles for the Contact section */
+#contact {
+    background-color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+/* Style for the Google Maps iframe - adjust the height as needed */
+.map iframe {
+    width: 100%;
+    height: 300px;
+    /* Adjust this value for the map's height */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Responsive styles for the Contact section */
+@media screen and (max-width: 768px) {
+    #contact h2 {
+        font-size: 24px;
+        /* Smaller heading size for smaller screens */
+    }
+
+    .contact-info p {
+        font-size: 14px;
+        /* Smaller font size for contact information */
+    }
+
+    .map iframe {
+        height: 200px;
+        /* Reduce map height for smaller screens */
+    }
+}
+
+/* Default styles for the Footer section */
+footer {
+    background-color: #0070c0;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-links ul li {
+    margin-right: 20px;
+}
+
+.footer-links ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Add space between list items */
+.footer-links ul li {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+/* Responsive styles for the Footer section */
+@media screen and (max-width: 768px) {
+    footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-links ul {
+        justify-content: flex-start;
+    }
+
+    .footer-links ul li {
+        margin-right: 0;
+    }
+
+    .footer-links ul li a {
+        font-size: 14px;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
